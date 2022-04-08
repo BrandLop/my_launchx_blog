@@ -16,5 +16,15 @@
       <description>¡Hola a tod@s! Desde mi punto de vista las cualidades y valores que debe tener un desarrollador de software son:  👉 Capacidad de resolución de problemas. 👉 Responsable. 👉 Autodidacta. 👉 Saber trabajar en equipo. 👉 Comunicación clara 👉 Creativo.  Recientemente acabo de considerar algunas más, gracias al MC Carlo, las cuales son:  👉 Conocer bien tu SO con el que trabajas día a día. 👉 Ser un pro en tu editor de texto (VSCode, Atom, Vim, etc) o IDE (IntelliJ, PyCharm, Visual Studio, etc) que más usas.</description>
     </item>
     
+    <item>
+      <title>Mi vida en Launch X</title>
+      <link>https://brandlop.github.io/my_launchx_blog/posts/post_1/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://brandlop.github.io/my_launchx_blog/posts/post_1/</guid>
+      <description>¡Hola a tod@s! Anteriormente, ya había estado en innovaccion virtual, fue muy grata la experiencia al participar, por eso sigo trazando mi camino, ahora en launch x. Me emociona participar en launch x, ya que es la primera vez que participo en algo relacionado con desarrollo web.
+En la etapa del onboarding no me costó tanto el hacer las katas, puesto que tengo conocimientos básicos en python, me gusto ver la parte de excepciones.</description>
+    </item>
+    
   </channel>
 </rss>
