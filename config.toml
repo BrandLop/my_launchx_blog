@@ -19,5 +19,3 @@ paginate = 3
   showPostsOnHomepage = false
   addFrame = true
   addDot = true
-
-{{ template "_internal/google_analytics_async.html" . }}
