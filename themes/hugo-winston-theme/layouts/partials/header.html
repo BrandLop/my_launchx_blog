@@ -1,26 +1,13 @@
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECK97C66S0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ECK97C66S0');
-  </script>
-</head>
-<body>
-  <div class='header'>
-    <a class="header-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    <div class="menu-main">
-      <ul>
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-              <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
-                  <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-              </li>
-          {{end}}
-      </ul>
-    </div>
+<div class='header'>
+  <a class="header-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  <div class="menu-main">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+      <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+      </li>
+      {{end}}
+    </ul>
   </div>
-</body>
+</div>
