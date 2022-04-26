@@ -11,7 +11,7 @@ pygmentsUseClasses = true
 paginate = 3
 
 [params]
-  google_analytics_id = 'G-ECK97C66S0'
+  googleAnalytics = 'G-ECK97C66S0'
   # Hey Explorer aquí pon tu twitter 👇
   twitter_handle = "@visual_partner"
   showAuthorOnHomepage = true
@@ -19,3 +19,5 @@ paginate = 3
   showPostsOnHomepage = false
   addFrame = true
   addDot = true
+
+{{ template "_internal/google_analytics_async.html" . }}

@@ -42,6 +42,8 @@
     {{ end }}
     {{ partial "footer.html" . }}
   </div>
+  
+  {{ template "_internal/google_analytics_async.html" . }}
 
   {{ $scripts := resources.Get "js/scripts.js" }}
 
@@ -56,7 +58,6 @@
   {{ block "footer_js" . }}
   {{ end }}
 
-  {{ partial "google-analytics.html" . }}
 
 </body>
 </html>
