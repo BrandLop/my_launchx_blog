@@ -43,7 +43,7 @@
     {{ partial "footer.html" . }}
   </div>
   
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 
   {{ $scripts := resources.Get "js/scripts.js" }}
 
