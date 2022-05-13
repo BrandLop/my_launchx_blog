@@ -11,11 +11,7 @@ pygmentsUseClasses = true
 paginate = 3
 
 [params]
-<<<<<<< HEAD
-  googleAnalytics = 'G-ECK97C66S0'
-=======
   google_analytics_id = ""
->>>>>>> parent of 4cf157c (Add GTM)
   # Hey Explorer aquí pon tu twitter 👇
   twitter_handle = "@visual_partner"
   showAuthorOnHomepage = true
