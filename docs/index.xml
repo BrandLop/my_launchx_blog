@@ -6,7 +6,17 @@
     <description>Recent content in Launch X Bitácora de viaje on Bitácora de Viaje de BrandLop :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://brandlop.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://brandlop.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métodos HTTP</title>
+      <link>https://brandlop.github.io/my_launchx_blog/posts/post_3/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://brandlop.github.io/my_launchx_blog/posts/post_3/</guid>
+      <description>Introducción Cuando estamos navegando en internet, al momento de querer visitar cualquier sitio web, se genera una comunicación entre nuestro navegador web (chrome, firefox, safari, edge, etc) y un servidor web, esto, con ayuda del protocolo (Hypertext Transfer Protocol) que se encarga de administrar las peticiones (request en ingles) y respuestas (response en ingles) que proporciona el servidor web.
+Métodos de petición HTTP HTTP tiene predefinidos un conjunto de métodos de petición, son solicitudes que se realizan para efectuar una determinada acción en un recurso en concreto, como acceder a una pagina web, enviar datos de un formulario, consultar un API, etc.</description>
+    </item>
+    
     <item>
       <title>Instalar Node.js en Ubuntu</title>
       <link>https://brandlop.github.io/my_launchx_blog/posts/post_2/</link>
