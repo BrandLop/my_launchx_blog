@@ -6,7 +6,17 @@
     <description>Recent content in Launch X Bitácora de viaje on Bitácora de Viaje de BrandLop :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://brandlop.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://brandlop.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Códigos de Estado HTTP</title>
+      <link>https://brandlop.github.io/my_launchx_blog/posts/post_4/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://brandlop.github.io/my_launchx_blog/posts/post_4/</guid>
+      <description>Introducción Este post es una continuación del contenido abordado en el post de Métodos HTTP, en esta ocasión describiremos en que consisten los códigos HTTP, que básicamente, representan mensajes del servidor que permiten conocer cómo fueron las cosas cuando se recibe una petición de un cliente, como desarrollador web son una herramienta fundamental para diagnosticar y arreglar errores de configuración.
+Códigos de estado de respuesta HTTP Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una petición HTTP específica.</description>
+    </item>
+    
     <item>
       <title>Métodos HTTP</title>
       <link>https://brandlop.github.io/my_launchx_blog/posts/post_3/</link>

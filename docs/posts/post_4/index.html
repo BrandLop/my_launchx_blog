@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Códigos de Estado HTTP - Bitácora de Viaje de BrandLop :)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://brandlop.github.io/my_launchx_blog/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    <meta name="description" content="Una guia de los códigos de estado de respuesta HTTP"/>
+    <meta property="og:title" content="Códigos de Estado HTTP"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://brandlop.github.io/my_launchx_blog/posts/post_4/"/>
+    
+    <meta property="og:description" content="Una guia de los códigos de estado de respuesta HTTP"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@visual_partner"/>
+    <meta name="twitter:creator" content="@visual_partner"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://brandlop.github.io/my_launchx_blog/">Bitácora de Viaje de BrandLop :)</a>
+  <div class="menu-main">
+    <ul>
+      
+      
+      <li class="menu-item-aboutme">
+      <a href="../../pages/about/">AboutMe</a>
+      </li>
+      
+      <li class="menu-item-posts">
+      <a href="../../posts/">Posts</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Códigos de Estado HTTP<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p><img src="https://user-images.githubusercontent.com/94416443/168721828-9a0abfe3-85f1-47de-afd1-08aa1971c5ce.png" alt="image"></p>
+<h2 id="introducción">Introducción</h2>
+<p>Este post es una continuación del contenido abordado en el post de <a href="https://brandlop.github.io/my_launchx_blog/posts/post_3/">Métodos HTTP</a>, en esta ocasión describiremos en que consisten los códigos HTTP, que básicamente, representan mensajes del servidor que permiten conocer cómo fueron las cosas cuando se recibe una petición de un cliente, como desarrollador web son una herramienta fundamental para diagnosticar y arreglar errores de configuración.</p>
+<h2 id="códigos-de-estado-de-respuesta-http">Códigos de estado de respuesta HTTP</h2>
+<p>Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una petición HTTP específica. Se dividen en 5 tipos, ya que son respuestas que tienen significados similares, conocer que representan puede ayudar a saber que esta ocurriendo cuando, por ejemplo estamos generando un API.</p>
+<p>Los 5 tipos representan:</p>
+<ul>
+<li>Respuestas informativas (1XX)</li>
+<li>Respuestas satisfactorias (2XX)</li>
+<li>Redirecciones (3XX)</li>
+<li>Errores de los clientes (4XX)</li>
+<li>Errores de los servidores (5XX)</li>
+</ul>
+<h3 id="respuestas-informativas">Respuestas informativas</h3>
+<p>Un código de estado de tipo 1XX te dice que la solicitud que has hecho al servidor sigue en curso por alguna razón.</p>
+<ul>
+<li><strong>100 Continue:</strong> Es una respuesta provisional que indica que todo hasta ahora está bien y que el cliente debe continuar con la solicitud o ignorarla si ya está terminada.</li>
+<li><strong>101 Switching Protocol:</strong>
+Este código se envía en respuesta a un encabezado de solicitud <code>Upgrade</code> por el cliente e indica que el servidor acepta el cambio de protocolo propuesto por el navegador web.</li>
+<li><strong>102 Processing:</strong>
+Este código indica que el servidor ha recibido la solicitud y aún se encuentra procesándose, por lo que no hay respuesta disponible.</li>
+<li><strong>103 Early Hints:</strong>
+Este código de estado está pensado principalmente para ser usado con el encabezado <code>Link</code>, permitiendo que el navegador web empiece a pre-cargar recursos mientras el servidor prepara una respuesta.</li>
+</ul>
+<h3 id="respuestas-satisfactorias">Respuestas satisfactorias</h3>
+<p>Una respuesta de tipo 2XX significa que todo funciona exactamente como se esperaba.</p>
+<ul>
+<li><strong>200 OK:</strong>
+La solicitud ha tenido éxito. Este es el código que se recibe cuando un recurso actúa como se esperaba.</li>
+<li><strong>201 Created:</strong>
+La solicitud ha tenido éxito y se ha creado un nuevo recurso como resultado de ello. Ésta es típicamente la respuesta enviada después de una petición PUT.</li>
+<li><strong>202 Accepted:</strong>
+La solicitud se ha recibido, pero aún se esta procesando. La solicitud puede, en última instancia, dar lugar o no a una respuesta completa. Está pensado para los casos en que otro proceso o servidor maneja la solicitud, o para el procesamiento por lotes.</li>
+<li><strong>203 Non-Authoritative Information:</strong>
+La petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente originalmente solicitada, sino que se recoge de una copia local o de un tercero. Excepto esta condición, se debe preferir una respuesta de 200 OK en lugar de esta respuesta.</li>
+<li><strong>204 No Content:</strong>
+La petición se ha completado con éxito pero su respuesta no tiene ningún contenido, aunque los encabezados pueden ser útiles.</li>
+<li><strong>205 Reset Content:</strong>
+Contiene lo de un código 204 y además, el navegador web tiene que inicializar la vista desde la que se realizó la petición, este código es útil por ejemplo para páginas con formularios cuyo contenido debe borrarse después de que el usuario lo envíe.</li>
+<li><strong>206 Partial Content:</strong>
+La petición servirá parcialmente el contenido solicitado. Esta característica es utilizada por herramientas de descarga como wget para continuar la transferencia de descargas anteriormente interrumpidas, o para dividir una descarga y procesar las partes simultáneamente.</li>
+</ul>
+<h3 id="redirecciones">Redirecciones</h3>
+<p>Un código de estado de tipo 3XX es el proceso utilizado para comunicar que un recurso ha sido trasladado a una nueva ubicación.</p>
+<ul>
+<li><strong>300 Multiple Choice:</strong>
+A veces, puede haber múltiples recursos posibles con los que el servidor puede responder para cumplir con la solicitud de su navegador. Un código de estado 300 significa que tu navegador ahora tiene que elegir entre ellos. Esto puede ocurrir cuando hay múltiples extensiones de tipo de archivo disponibles.</li>
+<li><strong>301 Moved Permanently:</strong>
+Este código se entrega cuando una página web o un recurso ha sido reemplazado permanentemente por un recurso diferente. Se utiliza para la redirección permanente del URL.</li>
+<li><strong>302 Found:</strong>
+Este código de respuesta significa que el recurso de la URL solicitada ha sido cambiado temporalmente. Se utiliza para la redirección temporal de la URL.</li>
+<li><strong>303 See Other:</strong>
+El servidor envía esta respuesta para dirigir al cliente a un nuevo recurso solicitado a otra dirección usando una petición GET.</li>
+<li><strong>304 Not Modified:</strong>
+Este código le dice al navegador que los recursos almacenados en la caché del navegador no han cambiado. Se usa para acelerar la carga de páginas web reutilizando los recursos descargados previamente.</li>
+<li><strong>307 Temporary Redirect:</strong>
+El servidor envía esta respuesta para dirigir al cliente a obtener el recurso solicitado a otra URL con el mismo método que se usó la petición anterior. Tiene la misma semántica que el código de respuesta HTTP <code>302 Found</code>, con la excepción de que el navegador web no puede cambiar el método HTTP usado.</li>
+<li><strong>308 Permanent Redirect:</strong>
+Significa que el recurso ahora se encuentra permanentemente en otra URL, tiene la misma semántica que el código de respuesta HTTP <code>301 Moved Permanently</code>, con la excepción de que el navegador web no debe cambiar el método HTTP usado.</li>
+</ul>
+<h3 id="errores-de-los-clientes">Errores de los clientes</h3>
+<p>En el nivel 400, los códigos de estado HTTP, son códigos de error que especifican que hay un fallo en el navegador web y/o en la petición.</p>
+<ul>
+<li><strong>400 Bad Request:</strong>
+Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida.</li>
+<li><strong>401 Unauthorized:</strong>
+Es necesario autenticar para obtener la respuesta solicitada. Esta es similar a 403, pero en este caso, la autenticación es posible.</li>
+<li><strong>403 Forbidden:</strong>
+El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está rechazando otorgar una respuesta apropiada.</li>
+<li><strong>404 Not Found:</strong>
+El servidor no pudo encontrar el contenido solicitado. Este código de respuesta es uno de los más famosos dada su alta ocurrencia en la web.</li>
+<li><strong>405 Method Not Allowed:</strong>
+El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser utilizado. Los dos métodos obligatorios, GET y HEAD, nunca deben ser deshabilitados y no deberían retornar este código de error.</li>
+<li><strong>406 Not Acceptable:</strong>
+El recurso solicitado es capaz de generar sólo contenido que no es aceptable según los encabezados de aceptación enviados en la petición.</li>
+<li><strong>407 Proxy Authentication Required :</strong>
+Esto es similar al código 401, pero la autenticación debe estar hecha a partir de un proxy.</li>
+<li><strong>408 Request Timeout:</strong>
+Esta respuesta es enviada cuando el servidor no recibió la solicitud completa que fue enviada por el navegador web. Una posible causa podría ser la saturación de la red, lo que provoca la pérdida de paquetes de datos entre el navegador y el servidor.</li>
+<li><strong>409 Conflict:</strong>
+Esta respuesta puede ser enviada cuando una petición tiene conflicto con el estado actual del servidor.</li>
+<li><strong>410 Gone:</strong>
+Esta respuesta puede ser enviada cuando el contenido solicitado ha sido borrado del servidor.</li>
+<li><strong>414 URI Too Long:</strong>
+La URL solicitada por el cliente es más larga de lo que el servidor está dispuesto a interpretar.</li>
+<li><strong>415 Unsupported Media Type:</strong>
+El formato multimedia de los datos solicitados no está soportado por el servidor, por lo cual el servidor rechaza la solicitud.</li>
+<li><strong>417 Expectation Failed:</strong>
+Significa que la expectativa indicada por el campo de encabezado Expect solicitada no puede ser cumplida por el servidor.</li>
+<li><strong>418 I&rsquo;m a teapot:</strong>
+El servidor se rehúsa a intentar hacer café con una tetera. Este código fue parte del April Fools' Day de 1998 😂</li>
+</ul>
+<h3 id="errores-de-los-servidores">Errores de los servidores</h3>
+<p>En el nivel 500, los códigos de estado HTTP, son códigos de error que especifican que hay un fallo en el servidor web.</p>
+<ul>
+<li><strong>500 Internal Server Error:</strong>
+El servidor ha encontrado una situación que no sabe cómo manejarla.</li>
+<li><strong>501 Not Implemented:</strong>
+El método solicitado no está soportado por el servidor y no puede ser manejado. Los únicos métodos que los servidores requieren soporte (y por lo tanto no deben retornar este código) son <code>GET</code> y <code>HEAD</code>.</li>
+<li><strong>502 Bad Gateway:</strong>
+Esta respuesta de error significa que el servidor, mientras trabaja como gateway para obtener una respuesta necesaria para manejar la petición, obtuvo una respuesta inválida.</li>
+<li><strong>503 Service Unavailable:</strong>
+La solicitud no puede ser completada en este momento. Este respuesta de error puede ser devuelta por un servidor sobrecargado que no puede manejar solicitudes adicionales.</li>
+<li><strong>504 Gateway Timeout:</strong>
+Esta respuesta de error es dada cuando el servidor está actuando como una puerta de enlace y no puede obtener una respuesta a tiempo.</li>
+<li><strong>508 Loop Detected :</strong>
+El servidor detectó un ciclo infinito mientras procesaba la solicitud.</li>
+</ul>
+<h2 id="-referencias">📕 Referencias</h2>
+<ol>
+<li><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">Developer Mozilla</a></li>
+<li><a href="https://kinsta.com/es/blog/codigos-de-estado-de-http/">Una guía completa y una lista de códigos de estado HTTP</a></li>
+</ol>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-linkedin">
+        <a href="https://www.linkedin.com/in/brandlop/" title="linkedin" target="_blank" rel="noopener">
+          <img src="../../images/social/linkedin.svg" width="24" height="24" alt="linkedin"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/BrandLop" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HL5H77BT8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8HL5H77BT8');
+      </script>
+    
+  
+
+
+</body>
+</html>
