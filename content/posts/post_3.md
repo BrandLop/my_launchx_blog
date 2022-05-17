@@ -3,9 +3,7 @@ title: "Métodos HTTP"
 date: 2022-05-15
 description: 'Explicación de métodos de petición HTTP'
 ---
-<div align="center">
-    <img src="../../docs/images/http_design.png" width="700">
-</div>
+![api-http-design-restful](https://user-images.githubusercontent.com/94416443/168721302-eff32676-b1c7-4e0a-95de-8a33b043e6d5.png)
 
 ## Introducción
 
@@ -25,7 +23,7 @@ El método `POST` se utiliza para enviar datos al servidor por medio del `body`,
 
 ### PUT
 
-Es similar al metodo `POST`, la principal diferencia entre ambos es que `PUT` actualiza recursos existentes en el servidor y `POST` crea un nuevos recursos cada vez que se ejecuta.
+Es similar al método `POST`, la principal diferencia entre ambos es que `PUT` actualiza recursos existentes en el servidor y `POST` crea un nuevos recursos cada vez que se ejecuta.
 
 ### DELETE
 
